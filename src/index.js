@@ -5,7 +5,7 @@ import { render } from 'react-dom'
 import App from './components/App'
 
 // Importing the styles
-import './styles.less'
+import './styles.css'
 
 // 👉 STEP 1 - Import React Router's Router
 import { BrowserRouter as Router } from 'react-router-dom'

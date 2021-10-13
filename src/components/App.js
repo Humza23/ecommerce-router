@@ -15,7 +15,7 @@ function fetchStock() {
   return Promise.resolve({ success: true, data })
 }
 
-export default function App(props) {
+export default function App() {
   const [stock, setStock] = useState([])
 
   useEffect(() => {

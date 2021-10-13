@@ -2,7 +2,12 @@
   "name": "web-guided-project-react-router",
   "version": "0.0.1",
   "scripts": {
-    "start": "parcel src/index.html"
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
   },
   "license": "ISC",
   "devDependencies": {
@@ -15,14 +20,19 @@
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-router-dom": "^5.2.0"
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "^4.0.3"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/LambdaSchool/web-guided-project-react-router.git"
-  },
-  "bugs": {
-    "url": "https://github.com/LambdaSchool/web-guided-project-react-router/issues"
-  },
-  "homepage": "https://github.com/LambdaSchool/web-guided-project-react-router#readme"
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
 }
