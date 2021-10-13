@@ -324,7 +324,7 @@ checkPropTypes.resetWarningCache = function () {
 
 module.exports = checkPropTypes;
 },{"./lib/ReactPropTypesSecret":"../node_modules/prop-types/lib/ReactPropTypesSecret.js"}],"../node_modules/react/cjs/react.development.js":[function(require,module,exports) {
-/** @license React v16.13.1
+/** @license React v16.14.0
  * react.development.js
  *
  * Copyright (c) Facebook, Inc. and its affiliates.
@@ -342,7 +342,7 @@ if ("development" !== "production") {
 
     var checkPropTypes = require('prop-types/checkPropTypes');
 
-    var ReactVersion = '16.13.1'; // The Symbol used to tag the ReactElement-like types. If there is no native Symbol
+    var ReactVersion = '16.14.0'; // The Symbol used to tag the ReactElement-like types. If there is no native Symbol
     // nor polyfill, then a plain number is used for performance.
 
     var hasSymbol = typeof Symbol === 'function' && Symbol.for;
@@ -3428,7 +3428,7 @@ if ("development" === 'production') {
   module.exports = require('./cjs/scheduler-tracing.development.js');
 }
 },{"./cjs/scheduler-tracing.development.js":"../node_modules/scheduler/cjs/scheduler-tracing.development.js"}],"../node_modules/react-dom/cjs/react-dom.development.js":[function(require,module,exports) {
-/** @license React v16.13.1
+/** @license React v16.14.0
  * react-dom.development.js
  *
  * Copyright (c) Facebook, Inc. and its affiliates.
@@ -28166,7 +28166,7 @@ if ("development" !== "production") {
       };
     }
 
-    var ReactVersion = '16.13.1';
+    var ReactVersion = '16.14.0';
     setAttemptUserBlockingHydration(attemptUserBlockingHydration$1);
     setAttemptContinuousHydration(attemptContinuousHydration$1);
     setAttemptHydrationAtCurrentPriority(attemptHydrationAtCurrentPriority$1);
@@ -28285,7 +28285,23 @@ if ("development" === 'production') {
 } else {
   module.exports = require('./cjs/react-dom.development.js');
 }
-},{"./cjs/react-dom.development.js":"../node_modules/react-dom/cjs/react-dom.development.js"}],"../node_modules/@babel/runtime/helpers/esm/inheritsLoose.js":[function(require,module,exports) {
+},{"./cjs/react-dom.development.js":"../node_modules/react-dom/cjs/react-dom.development.js"}],"../node_modules/@babel/runtime/helpers/esm/setPrototypeOf.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = _setPrototypeOf;
+
+function _setPrototypeOf(o, p) {
+  exports.default = _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) {
+    o.__proto__ = p;
+    return o;
+  };
+
+  return _setPrototypeOf(o, p);
+}
+},{}],"../node_modules/@babel/runtime/helpers/esm/inheritsLoose.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -28293,12 +28309,16 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = _inheritsLoose;
 
+var _setPrototypeOf = _interopRequireDefault(require("./setPrototypeOf.js"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
 function _inheritsLoose(subClass, superClass) {
   subClass.prototype = Object.create(superClass.prototype);
   subClass.prototype.constructor = subClass;
-  subClass.__proto__ = superClass;
+  (0, _setPrototypeOf.default)(subClass, superClass);
 }
-},{}],"../node_modules/react-is/cjs/react-is.development.js":[function(require,module,exports) {
+},{"./setPrototypeOf.js":"../node_modules/@babel/runtime/helpers/esm/setPrototypeOf.js"}],"../node_modules/react-is/cjs/react-is.development.js":[function(require,module,exports) {
 /** @license React v16.13.1
  * react-is.development.js
  *
@@ -29357,11 +29377,11 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.createBrowserHistory = createBrowserHistory;
 exports.createHashHistory = createHashHistory;
-exports.createMemoryHistory = createMemoryHistory;
 exports.createLocation = createLocation;
+exports.createMemoryHistory = createMemoryHistory;
+exports.createPath = createPath;
 exports.locationsAreEqual = locationsAreEqual;
 exports.parsePath = parsePath;
-exports.createPath = createPath;
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/esm/extends"));
 
@@ -30295,7 +30315,7 @@ function createMemoryHistory(props) {
   };
   return history;
 }
-},{"@babel/runtime/helpers/esm/extends":"../node_modules/@babel/runtime/helpers/esm/extends.js","resolve-pathname":"../node_modules/resolve-pathname/esm/resolve-pathname.js","value-equal":"../node_modules/value-equal/esm/value-equal.js","tiny-warning":"../node_modules/tiny-warning/dist/tiny-warning.esm.js","tiny-invariant":"../node_modules/tiny-invariant/dist/tiny-invariant.esm.js"}],"../node_modules/mini-create-react-context/dist/esm/index.js":[function(require,module,exports) {
+},{"@babel/runtime/helpers/esm/extends":"../node_modules/@babel/runtime/helpers/esm/extends.js","resolve-pathname":"../node_modules/resolve-pathname/esm/resolve-pathname.js","value-equal":"../node_modules/value-equal/esm/value-equal.js","tiny-warning":"../node_modules/tiny-warning/dist/tiny-warning.esm.js","tiny-invariant":"../node_modules/tiny-invariant/dist/tiny-invariant.esm.js"}],"../node_modules/react-router-dom/node_modules/react-router/node_modules/mini-create-react-context/dist/esm/index.js":[function(require,module,exports) {
 var global = arguments[3];
 "use strict";
 
@@ -30314,9 +30334,9 @@ var _tinyWarning = _interopRequireDefault(require("tiny-warning"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
+function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function (nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 
-function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
 var MAX_SIGNED_31_BIT_INT = 1073741823;
 var commonjsGlobal = typeof globalThis !== 'undefined' ? globalThis : typeof window !== 'undefined' ? window : typeof global !== 'undefined' ? global : {};
@@ -31049,15 +31069,17 @@ function hoistNonReactStatics(targetComponent, sourceComponent, blacklist) {
 
 module.exports = hoistNonReactStatics;
 
-},{"react-is":"../node_modules/react-is/index.js"}],"../node_modules/react-router/esm/react-router.js":[function(require,module,exports) {
+},{"react-is":"../node_modules/react-is/index.js"}],"../node_modules/react-router-dom/node_modules/react-router/esm/react-router.js":[function(require,module,exports) {
 var global = arguments[3];
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+exports.MemoryRouter = void 0;
 exports.Prompt = Prompt;
 exports.Redirect = Redirect;
+exports.__RouterContext = exports.__HistoryContext = exports.Switch = exports.StaticRouter = exports.Router = exports.Route = void 0;
 exports.generatePath = generatePath;
 exports.matchPath = matchPath;
 exports.useHistory = useHistory;
@@ -31065,7 +31087,6 @@ exports.useLocation = useLocation;
 exports.useParams = useParams;
 exports.useRouteMatch = useRouteMatch;
 exports.withRouter = withRouter;
-exports.__RouterContext = exports.__HistoryContext = exports.Switch = exports.StaticRouter = exports.Router = exports.Route = exports.MemoryRouter = void 0;
 
 var _inheritsLoose2 = _interopRequireDefault(require("@babel/runtime/helpers/esm/inheritsLoose"));
 
@@ -31100,17 +31121,9 @@ var createNamedContext = function createNamedContext(name) {
   return context;
 };
 
-var historyContext = /*#__PURE__*/createNamedContext("Router-History"); // TODO: Replace with React.createContext once we can assume React 16+
-
+var historyContext = /*#__PURE__*/createNamedContext("Router-History");
 exports.__HistoryContext = historyContext;
-
-var createNamedContext$1 = function createNamedContext(name) {
-  var context = (0, _miniCreateReactContext.default)();
-  context.displayName = name;
-  return context;
-};
-
-var context = /*#__PURE__*/createNamedContext$1("Router");
+var context = /*#__PURE__*/createNamedContext("Router");
 /**
  * The public API for putting history on context.
  */
@@ -31172,18 +31185,22 @@ var Router = /*#__PURE__*/function (_React$Component) {
   };
 
   _proto.componentWillUnmount = function componentWillUnmount() {
-    if (this.unlisten) this.unlisten();
+    if (this.unlisten) {
+      this.unlisten();
+      this._isMounted = false;
+      this._pendingLocation = null;
+    }
   };
 
   _proto.render = function render() {
-    return _react.default.createElement(context.Provider, {
+    return /*#__PURE__*/_react.default.createElement(context.Provider, {
       value: {
         history: this.props.history,
         location: this.state.location,
         match: Router.computeRootMatch(this.state.location.pathname),
         staticContext: this.props.staticContext
       }
-    }, _react.default.createElement(historyContext.Provider, {
+    }, /*#__PURE__*/_react.default.createElement(historyContext.Provider, {
       children: this.props.children || null,
       value: this.props.history
     }));
@@ -31228,7 +31245,7 @@ var MemoryRouter = /*#__PURE__*/function (_React$Component) {
   var _proto = MemoryRouter.prototype;
 
   _proto.render = function render() {
-    return _react.default.createElement(Router, {
+    return /*#__PURE__*/_react.default.createElement(Router, {
       history: this.history,
       children: this.props.children
     });
@@ -31289,11 +31306,11 @@ function Prompt(_ref) {
   var message = _ref.message,
       _ref$when = _ref.when,
       when = _ref$when === void 0 ? true : _ref$when;
-  return _react.default.createElement(context.Consumer, null, function (context) {
+  return /*#__PURE__*/_react.default.createElement(context.Consumer, null, function (context) {
     !context ? "development" !== "production" ? (0, _tinyInvariant.default)(false, "You should not use <Prompt> outside a <Router>") : (0, _tinyInvariant.default)(false) : void 0;
     if (!when || context.staticContext) return null;
     var method = context.history.block;
-    return _react.default.createElement(Lifecycle, {
+    return /*#__PURE__*/_react.default.createElement(Lifecycle, {
       onMount: function onMount(self) {
         self.release = method(message);
       },
@@ -31364,7 +31381,7 @@ function Redirect(_ref) {
       to = _ref.to,
       _ref$push = _ref.push,
       push = _ref$push === void 0 ? false : _ref$push;
-  return _react.default.createElement(context.Consumer, null, function (context) {
+  return /*#__PURE__*/_react.default.createElement(context.Consumer, null, function (context) {
     !context ? "development" !== "production" ? (0, _tinyInvariant.default)(false, "You should not use <Redirect> outside a <Router>") : (0, _tinyInvariant.default)(false) : void 0;
     var history = context.history,
         staticContext = context.staticContext;
@@ -31379,7 +31396,7 @@ function Redirect(_ref) {
       return null;
     }
 
-    return _react.default.createElement(Lifecycle, {
+    return /*#__PURE__*/_react.default.createElement(Lifecycle, {
       onMount: function onMount() {
         method(location);
       },
@@ -31511,7 +31528,7 @@ var Route = /*#__PURE__*/function (_React$Component) {
   _proto.render = function render() {
     var _this = this;
 
-    return _react.default.createElement(context.Consumer, null, function (context$1) {
+    return /*#__PURE__*/_react.default.createElement(context.Consumer, null, function (context$1) {
       !context$1 ? "development" !== "production" ? (0, _tinyInvariant.default)(false, "You should not use <Route> outside a <Router>") : (0, _tinyInvariant.default)(false) : void 0;
       var location = _this.props.location || context$1.location;
       var match = _this.props.computedMatch ? _this.props.computedMatch // <Switch> already computed the match for us
@@ -31526,13 +31543,13 @@ var Route = /*#__PURE__*/function (_React$Component) {
           render = _this$props.render; // Preact uses an empty array as children by
       // default, so use null if that's the case.
 
-      if (Array.isArray(children) && children.length === 0) {
+      if (Array.isArray(children) && isEmptyChildren(children)) {
         children = null;
       }
 
-      return _react.default.createElement(context.Provider, {
+      return /*#__PURE__*/_react.default.createElement(context.Provider, {
         value: props
-      }, props.match ? children ? typeof children === "function" ? "development" !== "production" ? evalChildrenDev(children, props, _this.props.path) : children(props) : children : component ? _react.default.createElement(component, props) : render ? render(props) : null : typeof children === "function" ? "development" !== "production" ? evalChildrenDev(children, props, _this.props.path) : children(props) : null);
+      }, props.match ? children ? typeof children === "function" ? "development" !== "production" ? evalChildrenDev(children, props, _this.props.path) : children(props) : children : component ? /*#__PURE__*/_react.default.createElement(component, props) : render ? render(props) : null : typeof children === "function" ? "development" !== "production" ? evalChildrenDev(children, props, _this.props.path) : children(props) : null);
     });
   };
 
@@ -31675,7 +31692,7 @@ var StaticRouter = /*#__PURE__*/function (_React$Component) {
       listen: this.handleListen,
       block: this.handleBlock
     };
-    return _react.default.createElement(Router, (0, _extends2.default)({}, rest, {
+    return /*#__PURE__*/_react.default.createElement(Router, (0, _extends2.default)({}, rest, {
       history: history,
       staticContext: context
     }));
@@ -31714,7 +31731,7 @@ var Switch = /*#__PURE__*/function (_React$Component) {
   _proto.render = function render() {
     var _this = this;
 
-    return _react.default.createElement(context.Consumer, null, function (context) {
+    return /*#__PURE__*/_react.default.createElement(context.Consumer, null, function (context) {
       !context ? "development" !== "production" ? (0, _tinyInvariant.default)(false, "You should not use <Switch> outside a <Router>") : (0, _tinyInvariant.default)(false) : void 0;
       var location = _this.props.location || context.location;
       var element, match; // We use React.Children.forEach instead of React.Children.toArray().find()
@@ -31723,7 +31740,7 @@ var Switch = /*#__PURE__*/function (_React$Component) {
       // component at different URLs.
 
       _react.default.Children.forEach(_this.props.children, function (child) {
-        if (match == null && _react.default.isValidElement(child)) {
+        if (match == null && /*#__PURE__*/_react.default.isValidElement(child)) {
           element = child;
           var path = child.props.path || child.props.from;
           match = path ? matchPath(location.pathname, (0, _extends2.default)({}, child.props, {
@@ -31732,7 +31749,7 @@ var Switch = /*#__PURE__*/function (_React$Component) {
         }
       });
 
-      return match ? _react.default.cloneElement(element, {
+      return match ? /*#__PURE__*/_react.default.cloneElement(element, {
         location: location,
         computedMatch: match
       }) : null;
@@ -31766,9 +31783,9 @@ function withRouter(Component) {
   var C = function C(props) {
     var wrappedComponentRef = props.wrappedComponentRef,
         remainingProps = (0, _objectWithoutPropertiesLoose2.default)(props, ["wrappedComponentRef"]);
-    return _react.default.createElement(context.Consumer, null, function (context) {
+    return /*#__PURE__*/_react.default.createElement(context.Consumer, null, function (context) {
       !context ? "development" !== "production" ? (0, _tinyInvariant.default)(false, "You should not use <" + displayName + " /> outside a <Router>") : (0, _tinyInvariant.default)(false) : void 0;
-      return _react.default.createElement(Component, (0, _extends2.default)({}, remainingProps, context, {
+      return /*#__PURE__*/_react.default.createElement(Component, (0, _extends2.default)({}, remainingProps, context, {
         ref: wrappedComponentRef
       }));
     });
@@ -31844,18 +31861,20 @@ if ("development" !== "production") {
     global[key] = "esm";
   }
 }
-},{"@babel/runtime/helpers/esm/inheritsLoose":"../node_modules/@babel/runtime/helpers/esm/inheritsLoose.js","react":"../node_modules/react/index.js","prop-types":"../node_modules/prop-types/index.js","history":"../node_modules/history/esm/history.js","tiny-warning":"../node_modules/tiny-warning/dist/tiny-warning.esm.js","mini-create-react-context":"../node_modules/mini-create-react-context/dist/esm/index.js","tiny-invariant":"../node_modules/tiny-invariant/dist/tiny-invariant.esm.js","@babel/runtime/helpers/esm/extends":"../node_modules/@babel/runtime/helpers/esm/extends.js","path-to-regexp":"../node_modules/path-to-regexp/index.js","react-is":"../node_modules/react-is/index.js","@babel/runtime/helpers/esm/objectWithoutPropertiesLoose":"../node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js","hoist-non-react-statics":"../node_modules/hoist-non-react-statics/dist/hoist-non-react-statics.cjs.js"}],"../node_modules/react-router-dom/esm/react-router-dom.js":[function(require,module,exports) {
+},{"@babel/runtime/helpers/esm/inheritsLoose":"../node_modules/@babel/runtime/helpers/esm/inheritsLoose.js","react":"../node_modules/react/index.js","prop-types":"../node_modules/prop-types/index.js","history":"../node_modules/history/esm/history.js","tiny-warning":"../node_modules/tiny-warning/dist/tiny-warning.esm.js","mini-create-react-context":"../node_modules/react-router-dom/node_modules/react-router/node_modules/mini-create-react-context/dist/esm/index.js","tiny-invariant":"../node_modules/tiny-invariant/dist/tiny-invariant.esm.js","@babel/runtime/helpers/esm/extends":"../node_modules/@babel/runtime/helpers/esm/extends.js","path-to-regexp":"../node_modules/path-to-regexp/index.js","react-is":"../node_modules/react-is/index.js","@babel/runtime/helpers/esm/objectWithoutPropertiesLoose":"../node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js","hoist-non-react-statics":"../node_modules/hoist-non-react-statics/dist/hoist-non-react-statics.cjs.js"}],"../node_modules/react-router-dom/esm/react-router-dom.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+exports.Link = exports.HashRouter = exports.BrowserRouter = void 0;
 Object.defineProperty(exports, "MemoryRouter", {
   enumerable: true,
   get: function () {
     return _reactRouter.MemoryRouter;
   }
 });
+exports.NavLink = void 0;
 Object.defineProperty(exports, "Prompt", {
   enumerable: true,
   get: function () {
@@ -31934,7 +31953,6 @@ Object.defineProperty(exports, "withRouter", {
     return _reactRouter.withRouter;
   }
 });
-exports.NavLink = exports.Link = exports.HashRouter = exports.BrowserRouter = void 0;
 
 var _reactRouter = require("react-router");
 
@@ -31977,7 +31995,7 @@ var BrowserRouter = /*#__PURE__*/function (_React$Component) {
   var _proto = BrowserRouter.prototype;
 
   _proto.render = function render() {
-    return _react.default.createElement(_reactRouter.Router, {
+    return /*#__PURE__*/_react.default.createElement(_reactRouter.Router, {
       history: this.history,
       children: this.props.children
     });
@@ -32024,7 +32042,7 @@ var HashRouter = /*#__PURE__*/function (_React$Component) {
   var _proto = HashRouter.prototype;
 
   _proto.render = function render() {
-    return _react.default.createElement(_reactRouter.Router, {
+    return /*#__PURE__*/_react.default.createElement(_reactRouter.Router, {
       history: this.history,
       children: this.props.children
     });
@@ -32090,9 +32108,9 @@ var LinkAnchor = forwardRef(function (_ref, forwardedRef) {
       !target || target === "_self") && // let browser handle "target=_blank" etc.
       !isModifiedEvent(event) // ignore clicks with modifier keys
       ) {
-          event.preventDefault();
-          navigate();
-        }
+        event.preventDefault();
+        navigate();
+      }
     }
   }); // React 15 compat
 
@@ -32104,7 +32122,7 @@ var LinkAnchor = forwardRef(function (_ref, forwardedRef) {
   /* eslint-disable-next-line jsx-a11y/anchor-has-content */
 
 
-  return _react.default.createElement("a", props);
+  return /*#__PURE__*/_react.default.createElement("a", props);
 });
 
 if ("development" !== "production") {
@@ -32122,7 +32140,7 @@ var Link = forwardRef(function (_ref2, forwardedRef) {
       to = _ref2.to,
       innerRef = _ref2.innerRef,
       rest = (0, _objectWithoutPropertiesLoose2.default)(_ref2, ["component", "replace", "to", "innerRef"]);
-  return _react.default.createElement(_reactRouter.__RouterContext.Consumer, null, function (context) {
+  return /*#__PURE__*/_react.default.createElement(_reactRouter.__RouterContext.Consumer, null, function (context) {
     !context ? "development" !== "production" ? (0, _tinyInvariant.default)(false, "You should not use <Link> outside a <Router>") : (0, _tinyInvariant.default)(false) : void 0;
     var history = context.history;
     var location = normalizeToLocation(resolveToLocation(to, context.location), context.location);
@@ -32131,7 +32149,8 @@ var Link = forwardRef(function (_ref2, forwardedRef) {
       href: href,
       navigate: function navigate() {
         var location = resolveToLocation(to, context.location);
-        var method = replace ? history.replace : history.push;
+        var isDuplicateNavigation = (0, _history.createPath)(context.location) === (0, _history.createPath)(normalizeToLocation(location));
+        var method = replace || isDuplicateNavigation ? history.replace : history.push;
         method(location);
       }
     }); // React 15 compat
@@ -32142,7 +32161,7 @@ var Link = forwardRef(function (_ref2, forwardedRef) {
       props.innerRef = innerRef;
     }
 
-    return _react.default.createElement(component, props);
+    return /*#__PURE__*/_react.default.createElement(component, props);
   });
 });
 exports.Link = Link;
@@ -32204,7 +32223,7 @@ var NavLink = forwardRef$1(function (_ref, forwardedRef) {
       to = _ref.to,
       innerRef = _ref.innerRef,
       rest = (0, _objectWithoutPropertiesLoose2.default)(_ref, ["aria-current", "activeClassName", "activeStyle", "className", "exact", "isActive", "location", "sensitive", "strict", "style", "to", "innerRef"]);
-  return _react.default.createElement(_reactRouter.__RouterContext.Consumer, null, function (context) {
+  return /*#__PURE__*/_react.default.createElement(_reactRouter.__RouterContext.Consumer, null, function (context) {
     !context ? "development" !== "production" ? (0, _tinyInvariant.default)(false, "You should not use <NavLink> outside a <Router>") : (0, _tinyInvariant.default)(false) : void 0;
     var currentLocation = locationProp || context.location;
     var toLocation = normalizeToLocation(resolveToLocation(to, currentLocation), currentLocation);
@@ -32218,8 +32237,14 @@ var NavLink = forwardRef$1(function (_ref, forwardedRef) {
       strict: strict
     }) : null;
     var isActive = !!(isActiveProp ? isActiveProp(match, currentLocation) : match);
-    var className = isActive ? joinClassnames(classNameProp, activeClassName) : classNameProp;
-    var style = isActive ? (0, _extends2.default)({}, styleProp, {}, activeStyle) : styleProp;
+    var className = typeof classNameProp === "function" ? classNameProp(isActive) : classNameProp;
+    var style = typeof styleProp === "function" ? styleProp(isActive) : styleProp;
+
+    if (isActive) {
+      className = joinClassnames(className, activeClassName);
+      style = (0, _extends2.default)({}, style, activeStyle);
+    }
+
     var props = (0, _extends2.default)({
       "aria-current": isActive && ariaCurrent || null,
       className: className,
@@ -32233,7 +32258,7 @@ var NavLink = forwardRef$1(function (_ref, forwardedRef) {
       props.innerRef = innerRef;
     }
 
-    return _react.default.createElement(Link, props);
+    return /*#__PURE__*/_react.default.createElement(Link, props);
   });
 });
 exports.NavLink = NavLink;
@@ -32241,22 +32266,22 @@ exports.NavLink = NavLink;
 if ("development" !== "production") {
   NavLink.displayName = "NavLink";
 
-  var ariaCurrentType = _propTypes.default.oneOf(["page", "step", "location", "date", "time", "true"]);
+  var ariaCurrentType = _propTypes.default.oneOf(["page", "step", "location", "date", "time", "true", "false"]);
 
   NavLink.propTypes = (0, _extends2.default)({}, Link.propTypes, {
     "aria-current": ariaCurrentType,
     activeClassName: _propTypes.default.string,
     activeStyle: _propTypes.default.object,
-    className: _propTypes.default.string,
+    className: _propTypes.default.oneOfType([_propTypes.default.string, _propTypes.default.func]),
     exact: _propTypes.default.bool,
     isActive: _propTypes.default.func,
     location: _propTypes.default.object,
     sensitive: _propTypes.default.bool,
     strict: _propTypes.default.bool,
-    style: _propTypes.default.object
+    style: _propTypes.default.oneOfType([_propTypes.default.object, _propTypes.default.func])
   });
 }
-},{"react-router":"../node_modules/react-router/esm/react-router.js","@babel/runtime/helpers/esm/inheritsLoose":"../node_modules/@babel/runtime/helpers/esm/inheritsLoose.js","react":"../node_modules/react/index.js","history":"../node_modules/history/esm/history.js","prop-types":"../node_modules/prop-types/index.js","tiny-warning":"../node_modules/tiny-warning/dist/tiny-warning.esm.js","@babel/runtime/helpers/esm/extends":"../node_modules/@babel/runtime/helpers/esm/extends.js","@babel/runtime/helpers/esm/objectWithoutPropertiesLoose":"../node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js","tiny-invariant":"../node_modules/tiny-invariant/dist/tiny-invariant.esm.js"}],"components/Home.js":[function(require,module,exports) {
+},{"react-router":"../node_modules/react-router-dom/node_modules/react-router/esm/react-router.js","@babel/runtime/helpers/esm/inheritsLoose":"../node_modules/@babel/runtime/helpers/esm/inheritsLoose.js","react":"../node_modules/react/index.js","history":"../node_modules/history/esm/history.js","prop-types":"../node_modules/prop-types/index.js","tiny-warning":"../node_modules/tiny-warning/dist/tiny-warning.esm.js","@babel/runtime/helpers/esm/extends":"../node_modules/@babel/runtime/helpers/esm/extends.js","@babel/runtime/helpers/esm/objectWithoutPropertiesLoose":"../node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js","tiny-invariant":"../node_modules/tiny-invariant/dist/tiny-invariant.esm.js"}],"components/Home.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -32530,19 +32555,19 @@ var _data = _interopRequireDefault(require("../data"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
+function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function (nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 
-function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
 
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
 
-function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(n); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
 
 function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
 
-function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+function _iterableToArrayLimit(arr, i) { var _i = arr == null ? null : typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"]; if (_i == null) return; var _arr = []; var _n = true; var _d = false; var _s, _e; try { for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
 
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
@@ -32614,7 +32639,7 @@ function getBundleURL() {
 }
 
 function getBaseURL(url) {
-  return ('' + url).replace(/^((?:https?|file|ftp|chrome-extension|moz-extension):\/\/.+)\/[^/]+$/, '$1') + '/';
+  return ('' + url).replace(/^((?:https?|file|ftp|chrome-extension|moz-extension):\/\/.+)?\/[^/]+(?:\?.*)?$/, '$1') + '/';
 }
 
 exports.getBundleURL = getBundleURLCached;
@@ -32709,7 +32734,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52747" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61970" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
