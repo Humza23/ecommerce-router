@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.js": "/router-ecommerce/static/js/main.8ba8f60b.chunk.js",
+    "main.js.map": "/router-ecommerce/static/js/main.8ba8f60b.chunk.js.map",
+    "runtime-main.js": "/router-ecommerce/static/js/runtime-main.e672a85c.js",
+    "runtime-main.js.map": "/router-ecommerce/static/js/runtime-main.e672a85c.js.map",
+    "static/js/2.e9788195.chunk.js": "/router-ecommerce/static/js/2.e9788195.chunk.js",
+    "static/js/2.e9788195.chunk.js.map": "/router-ecommerce/static/js/2.e9788195.chunk.js.map",
+    "index.html": "/router-ecommerce/index.html",
+    "static/js/2.e9788195.chunk.js.LICENSE.txt": "/router-ecommerce/static/js/2.e9788195.chunk.js.LICENSE.txt",
+    "static/media/styles.e43a0b00.less": "/router-ecommerce/static/media/styles.e43a0b00.less"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e672a85c.js",
+    "static/js/2.e9788195.chunk.js",
+    "static/js/main.8ba8f60b.chunk.js"
+  ]
+}
