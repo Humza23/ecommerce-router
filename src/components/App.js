@@ -22,7 +22,7 @@ export default function App() {
 
   return (
     <div className='App'>
-      <nav>
+      <nav className="topNav">
         <h1 className='store-header'>Humza&apos;s Thrift Shop</h1>
         <div className='nav-links'>
           <Link to='/ecommerce-router'>Home</Link>
